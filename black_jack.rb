@@ -8,3 +8,21 @@
 # For example, given a 11 and 13 as input, the 11 should be 'converted' into a 1 so the total sum will be 14.
 
 p "Enter two number separated by spaces:"
+n1, n2 = gets.chomp.split
+number1 = n1.to_i
+number2 = n2.to_i
+
+sum = number1 + number2
+if sum > 21
+  if number1 == 11
+    number1 = 1
+    p number1 + number2
+  elsif number2 == 11
+    number2 = 1
+    p number1 + number2
+  else
+    p 0
+  end
+else
+  p sum
+end 
