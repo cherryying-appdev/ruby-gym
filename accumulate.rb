@@ -5,10 +5,13 @@
 
 p "Are we there yet?"
 
+recorded = []
 answer = gets.chomp.downcase
-
+recorded.push(answer)
 while answer != "yes"
   p "Are we there yet?"
   
   answer = gets.chomp.downcase
+  recorded.push(answer)
 end
+p recorded
