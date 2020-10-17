@@ -35,5 +35,21 @@
 #   5
 #   "PlingPlang"
 
-
+require "prime"
 p "Enter an integer"
+integer = gets.chomp.to_i
+division = Prime.prime_division(integer)
+components = []
+division.each do |div|
+  components.push(div[0])
+end
+prime_list = components.join(" ")
+p prime_list.split
+changed = []
+prime_list.split.each do |prime_num|
+  change3 = prime_num.gsub("3", "Pling")
+  change5 = change3.gsub("5", "Plang")
+  change7 = change5.gsub("7", "Plong")
+  changed.push(change7)
+end
+p changed.join("")
