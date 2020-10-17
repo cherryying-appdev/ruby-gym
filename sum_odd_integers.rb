@@ -11,3 +11,12 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+number = gets.chomp.split
+odd_number = 0
+number.each do |input|
+  digit = input.to_i
+  if digit.odd?
+    odd_number += digit
+  end
+end
+p odd_number
